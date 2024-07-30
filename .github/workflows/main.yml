@@ -42,4 +42,4 @@ jobs:
           docker pull ${{ secrets.DOCKER_USERNAME }}/my-react-app
           docker stop my-react-app || true
           docker rm my-react-app || true
-          docker run -d -p 80:3000 --name my-react-app ${{ secrets.DOCKER_USERNAME }}/my-react-app
+          docker run -d -p 3000:3000 --name my-react-app ${{ secrets.DOCKER_USERNAME }}/my-react-app
