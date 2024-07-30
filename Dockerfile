@@ -1,8 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM alpine:3.20
-
-ENV NODE_VERSION 20.16.0
-
+FROM node:20.12.2
 
 # Set the working directory in the container
 WORKDIR /app
