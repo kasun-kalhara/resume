@@ -34,7 +34,7 @@ jobs:
     steps:
     - name: Deploy to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no -i "path_to_your_pem_file.pem" ec2-user@your_ec2_public_ip 'docker pull ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest && docker run -d -p 80:3000 ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest'
+        ssh -o StrictHostKeyChecking=no -i ssh_key.pem ec2-user@3.80.254.70 'docker pull ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest && docker run -d -p 80:3000 ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest'
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
