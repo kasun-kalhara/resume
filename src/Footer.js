@@ -9,7 +9,7 @@ import { GitHub } from "@mui/icons-material";
 
 function Footer() {
   return (
-    <div className="footer-main">
+    <div className="footer-main" >
       <div className="footer-main-flex">
         <div className="footer-main-icons">
           <a href="https://www.linkedin.com/in/kasun-bamunuarachchi-4516b31b1/">
