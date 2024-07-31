@@ -1,24 +1,15 @@
-# Use an official Node.js runtime as the base image
-FROM node:20.16.0
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
-
-# Install dependencies
+# Step 1: Build React App
+FROM node:alpine3.20 as build
+WORKDIR /app 
+COPY package.json .
 RUN npm install
-
-# Copy the rest of the application code to the working directory
 COPY . .
-
-# Build the React application
 RUN npm run build
 
-
-# Set the command to serve the build folder
-CMD ["npm",  "start"]
-
-# Expose port 3000 to be accessible from outside the container
+# Step 2: Server With Nginx
+FROM nginx:1.23-alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf *
+COPY --from=build /app/build .
 EXPOSE 3000
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
