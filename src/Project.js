@@ -15,7 +15,7 @@ function Projects() {
         </span>
         <div className="Skillset-skill-des">
           <div data-aos="fade-up">
-            <span id="title">GPS Live Tracking System</span>
+            <span id="title">GPS Assisted intelligent Bus Transit System</span>
             <span id="title-content">ESP32, NEO-8M GPS module, SIM900 GSM module, Node.js, React, Google Maps, Docker, Kubernetes, AWS
 • Developed a live tracking system using ESP32, NEO-8M GPS module, and SIM900 GSM module.
 • Integrated the system with a Node.js server to send real-time GPS data.
