@@ -42,7 +42,7 @@ function App() {
         <span>H</span>
         <span>C</span>
         <span>H</span>
-        <span>I</span>
+        <span>k</span>
         
       </span>
       <div className="App-hash">
