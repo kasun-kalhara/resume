@@ -28,7 +28,7 @@ function Aboutme() {
           continuous integration/continuous deployment (CI/CD) processes. Seeking to leverage my skills and experience
           to contribute to efficient and scalable software delivery pipelines in a dynamic tech environment
       </span>
-      <a className="Aboutme-cv" data-aos="fade-up" onClick={handleDownloadCV}>
+      <a className="Aboutme-cv" data-aos="fade-up"  onClick={handleDownloadCV}>
         Download CV
       </a>
     </div>
